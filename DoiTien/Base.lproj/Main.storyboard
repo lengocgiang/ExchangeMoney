@@ -1,25 +1,102 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DoiTien" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sp5-Tj-UfL">
+                                <rect key="frame" x="197" y="533" width="158" height="114"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="158" id="5Uu-gF-1W0"/>
+                                    <constraint firstAttribute="height" constant="114" id="Gi0-Eg-GEh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="VND -&gt; JPY">
+                                    <color key="titleColor" red="0.95686274510000002" green="0.97647058819999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="jpyExchange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cc1-Kf-1PY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z0g-Lv-jsU">
+                                <rect key="frame" x="20" y="533" width="158" height="114"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="114" id="FHi-x8-5fm"/>
+                                    <constraint firstAttribute="width" constant="158" id="g9H-kB-INK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="JPY -&gt; VND">
+                                    <color key="titleColor" red="0.95686274510000002" green="0.97647058819999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="vndExchange:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CH6-uO-Cm9"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="input" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BU9-Qm-9hx">
+                                <rect key="frame" x="20" y="94" width="335" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="OQf-2n-7O0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Output" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTs-iP-Ckj">
+                                <rect key="frame" x="20" y="240" width="335" height="99"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="VBg-DS-7Gq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VTs-iP-Ckj" secondAttribute="trailing" constant="20" id="5yg-Yw-zHs"/>
+                            <constraint firstItem="BU9-Qm-9hx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="7hW-5B-O2M"/>
+                            <constraint firstItem="Z0g-Lv-jsU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="E0F-7F-aDB"/>
+                            <constraint firstItem="VTs-iP-Ckj" firstAttribute="top" secondItem="BU9-Qm-9hx" secondAttribute="bottom" constant="56" id="HUh-CB-yD5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sp5-Tj-UfL" secondAttribute="bottom" constant="20" id="Hhz-rc-gMS"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Z0g-Lv-jsU" secondAttribute="bottom" constant="20" id="KSV-iE-cNo"/>
+                            <constraint firstAttribute="trailing" secondItem="sp5-Tj-UfL" secondAttribute="trailing" constant="20" id="OBg-Es-xhk"/>
+                            <constraint firstItem="BU9-Qm-9hx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="74" id="agz-b4-Enj"/>
+                            <constraint firstItem="VTs-iP-Ckj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="bFG-SF-MdR"/>
+                            <constraint firstAttribute="trailing" secondItem="BU9-Qm-9hx" secondAttribute="trailing" constant="20" id="kT3-dI-aBo"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Bz9-ew-Pdb" appends="YES" id="OLU-eT-gb7"/>
+                        </connections>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="inputTxtField" destination="BU9-Qm-9hx" id="HZ2-hg-4wl"/>
+                        <outlet property="outputLabel" destination="VTs-iP-Ckj" id="ZGD-JM-fel"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Bz9-ew-Pdb">
+                    <connections>
+                        <action selector="tapGesture:" destination="BYZ-38-t0r" id="YZi-em-a0k"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="272.5" y="428.5"/>
         </scene>
     </scenes>
 </document>
